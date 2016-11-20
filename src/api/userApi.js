@@ -7,8 +7,21 @@ export function getUsers() {
     return get('users');
 }
 
-function get(url) {    
+export function deleteUser(id) {
+    return del(`users/${id}`);
+}
+
+function get(url) {
     return fetch(baseUrl + url).then(onSuccess, error);
+}
+
+function del(url) {
+    debugger;
+    const request = new Request(baseUrl + url,  {
+        method: 'DELETE'
+    });
+
+    return fetch(request).then(onSuccess, onerror);
 }
 
 function onSuccess(response) {
