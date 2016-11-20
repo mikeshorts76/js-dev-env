@@ -10,7 +10,7 @@
     "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watchn"
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Cory House",
   "license": "MIT",
